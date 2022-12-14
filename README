@@ -1,0 +1,26 @@
+# Amber RESP PEG2000-DMG Tutorial
+
+In this tutorial we are going to leran hoe to parametierize PEG2000-DMG using RESP method. 
+
+**PEG2000-DMG** is a large, artificial lipid consisting of 414 atoms. This molecule is used as a lipid additive for the Moderna Covid Vaccine's lipid nano particle (LNP).
+
+First, we need to generate the 3D structure of PEG2000-DMG. In this tutorial, we use the structure from PubChem (PubChem ID **10257450**). Because the structure was generated from a 2D sdf file, we need to optimize it manually for faster results,  then optimized with semiempirical AM1 approximation.
+
+Next, we need to divide the optimized structure into several fragment molecules. In this tutorial, we will divide the structure into four fragments: **13C, 14L, EG, and TC**.
+
+Next, each of the fragments were further optimized using `DFT/B3LYP/6-311++G` and then continued with a single point energy calculation using `HF` with `IOp(6/33=2,6/41=10,6/42=17,6/50=1)`. (For better results, I recommend using DFT or MP2 or MP4 instead of HF.)
+
+Next, generate the `esp` file
+
+After that, the `ac` file
+
+and generate the `RSEP` file inpput using the ac file
+
+Then, calculate the RESP to obtain the final `atomic charge`
+
+Now, we have all the atomic charges and `mol2` files of the fragments.
+
+Finally, we need to combine all the fragments, `charges, and atom types` to obtain the parameterized PEG2000-DMG molecule.
+
+
+Happy Simulations!
