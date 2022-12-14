@@ -20,9 +20,7 @@ Next, each of the fragments were further optimized using `DFT/B3LYP/6-311++G` an
 
 Next, generate the `esp` file
 
-	```
-  espgen -i x_HF.log -o x.esp
-	```
+	`espgen -i x_HF.log -o x.esp`
 	
 After that, the `ac` file
 
@@ -35,10 +33,8 @@ and generate the `RSEP` file inpput using the ac file
 
 Then, calculate the RESP to obtain the final `atomic charge`
 
-	```
-  resp -i x_resp.in -o x_resp.out -p x_resp.pch -t EGT_resp.ach -e x.esp -s esot1
-	resp -i x_resp2.in -o x_resp2.out -p x_resp2.pch -t x_resp2.ach -e x.esp -s esot2 -q x_resp.ach
-	```
+ 	`resp -i x_resp.in -o x_resp.out -p x_resp.pch -t EGT_resp.ach -e x.esp -s esot1
+	resp -i x_resp2.in -o x_resp2.out -p x_resp2.pch -t x_resp2.ach -e x.esp -s esot2 -q x_resp.ach`
 	
 Now, we have all the atomic charges and `mol2` files of the fragments.
 
@@ -47,6 +43,7 @@ Now, we have all the atomic charges and `mol2` files of the fragments.
 Finally, we need to combine all the fragments, `charges, and atom types` to obtain the parameterized PEG2000-DMG molecule.
 
 ![figure](https://github.com/ade-wagimon/PEG2000-DMG/blob/main/figures/complex.png?raw=true)
+
 ![figure](https://github.com/ade-wagimon/PEG2000-DMG/blob/main/figures/simulasi.ppm?raw=true)
 
 Happy Simulations!
