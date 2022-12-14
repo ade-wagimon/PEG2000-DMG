@@ -1,0 +1,15 @@
+source leaprc.gaff
+source leaprc.gaff2
+source leaprc.water.tip3p
+loadAmberParams fix.frcmod
+x = loadmol2 final_1.mol2
+check x
+savepdb x complex.pdb
+saveAmberParm x complex.prmtop complex.inpcrd
+solvatebox x TIP3PBOX 10
+charge x 
+addions x Na+ 0
+addions x Cl- 0
+savepdb x solvate.pdb
+saveAmberParm x solvate.prmtop solvate.inpcrd
+quit
