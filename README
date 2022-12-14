@@ -2,6 +2,9 @@
 
 In this tutorial we are going to leran hoe to parametierize PEG2000-DMG using RESP method. 
 
+![Alt text](https://github.com/ade-wagimon/PEG2000-DMG/blob/main/figures/DMG-PEG_2000.svg.png?raw=true "PEG2000-DMG")
+
+
 **PEG2000-DMG** is a large, artificial lipid consisting of 414 atoms. This molecule is used as a lipid additive for the Moderna Covid Vaccine's lipid nano particle (LNP).
 
 First, we need to generate the 3D structure of PEG2000-DMG. In this tutorial, we use the structure from PubChem (PubChem ID **10257450**). Because the structure was generated from a 2D sdf file, we need to optimize it manually for faster results,  then optimized with semiempirical AM1 approximation.
