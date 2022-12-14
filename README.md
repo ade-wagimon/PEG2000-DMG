@@ -20,8 +20,10 @@ Next, each of the fragments were further optimized using `DFT/B3LYP/6-311++G` an
 
 Next, generate the `esp` file
 
-  `espgen -i x_HF.log -o x.esp`
-
+	```
+  espgen -i x_HF.log -o x.esp
+	```
+	
 After that, the `ac` file
 
   `antechamber -fi gout -fo ac -i x_HF.log -o x.ac` 
@@ -33,9 +35,11 @@ and generate the `RSEP` file inpput using the ac file
 
 Then, calculate the RESP to obtain the final `atomic charge`
 
-  `resp -i x_resp.in -o x_resp.out -p x_resp.pch -t EGT_resp.ach -e x.esp -s esot1`
-	`resp -i x_resp2.in -o x_resp2.out -p x_resp2.pch -t x_resp2.ach -e x.esp -s esot2 -q x_resp.ach`
-
+	```
+  resp -i x_resp.in -o x_resp.out -p x_resp.pch -t EGT_resp.ach -e x.esp -s esot1
+	resp -i x_resp2.in -o x_resp2.out -p x_resp2.pch -t x_resp2.ach -e x.esp -s esot2 -q x_resp.ach
+	```
+	
 Now, we have all the atomic charges and `mol2` files of the fragments.
 
   `antechamber -i x.ac -fi ac -o x_resp.mol2 -fo mol2 -c rc -cf x_resp2.ach`
