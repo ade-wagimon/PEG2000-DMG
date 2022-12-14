@@ -3,18 +3,19 @@
 In this tutorial we are going to leran hoe to parametierize PEG2000-DMG using RESP method. 
 
 
-![figure](https://github.com/ade-wagimon/PEG2000-DMG/blob/main/figures/DMG-PEG_2000.svg.png?raw=true)
+<img src="https://github.com/ade-wagimon/PEG2000-DMG/blob/main/figures/DMG-PEG_2000.svg.png" width=50% height=50%>
 
 
 **PEG2000-DMG** is a large, artificial lipid consisting of 414 atoms. This molecule is used as a lipid additive for the Moderna Covid Vaccine's lipid nano particle (LNP).
 
-First, we need to generate the 3D structure of PEG2000-DMG. In this tutorial, we use the structure from PubChem (PubChem ID **10257450**). Because the structure was generated from a 2D sdf file, we need to optimize it manually for faster results,  then optimized with semiempirical AM1 approximation.
+**First**, we need to generate the 3D structure of PEG2000-DMG. In this tutorial, we use the structure from PubChem (PubChem ID **10257450**). Because the structure was generated from a 2D sdf file, we need to optimize it manually for faster results,  then optimized with semiempirical AM1 approximation.
 
-![figure](https://github.com/ade-wagimon/PEG2000-DMG/blob/main/figures/PEG_DMG_ori.png?raw=true)
+<img src="https://github.com/ade-wagimon/PEG2000-DMG/blob/main/figures/PEG_DMG_ori.png" width=50% height=50%>
+
 
 Next, we need to divide the optimized structure into several fragment molecules. In this tutorial, we will divide the structure into four fragments: **13C, 14L, EG, and TC**.
 
-![figure](https://github.com/ade-wagimon/PEG2000-DMG/blob/main/figures/gabung.png)
+<img src="https://github.com/ade-wagimon/PEG2000-DMG/blob/main/figures/gabung.png" width=50% height=50%>
 
 Next, each of the fragments were further optimized using `DFT/B3LYP/6-311++G` and then continued with a single point energy calculation using `HF` with `IOp(6/33=2,6/41=10,6/42=17,6/50=1)`. (For better results, I recommend using DFT or MP2 or MP4 instead of HF.)
 
@@ -42,8 +43,7 @@ Now, we have all the atomic charges and `mol2` files of the fragments.
 
 Finally, we need to combine all the fragments, `charges, and atom types` to obtain the parameterized PEG2000-DMG molecule.
 
-![figure](https://github.com/ade-wagimon/PEG2000-DMG/blob/main/figures/complex.png?raw=true)
+<img src="https://github.com/ade-wagimon/PEG2000-DMG/blob/main/figures/complex.png" width=90% height=90%>
 
-![figure](https://github.com/ade-wagimon/PEG2000-DMG/blob/main/figures/simulasi.ppm?raw=true)
 
-Happy Simulations!
+Happy!
