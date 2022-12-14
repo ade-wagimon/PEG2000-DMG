@@ -24,7 +24,7 @@ Next, generate the `esp` file
 	
 After that, the `ac` file
 
-  `antechamber -fi gout -fo ac -i x_HF.log -o x.ac` 
+  `antechamber -fi gout -fo ac -i x_HF.log -o x.ac `
 
 and generate the `RSEP` file inpput using the ac file
 
