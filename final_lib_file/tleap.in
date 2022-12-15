@@ -1,0 +1,8 @@
+source leaprc.gaff
+set default PBRadii mbondi3
+loadoff PEGDMG_FINAL.lib
+x = sequence { 14L TCL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGL EGT }
+savepdb x complex.pdb
+saveamberparm x complex.prmtop complex.inpcrd
+quit
+
