@@ -37,9 +37,9 @@ Then, calculate the RESP to obtain the final `atomic charge`
  	resp -i x_resp.in -o x_resp.out -p x_resp.pch -t EGT_resp.ach -e x.esp -s esot1
 	resp -i x_resp2.in -o x_resp2.out -p x_resp2.pch -t x_resp2.ach -e x.esp -s esot2 -q x_resp.ach
 	
-Now, we have all the atomic charges and `mol2` files of the fragments.
+Now, we have all the atomic charges and `ac` files of the fragments.
 
-  	antechamber -i x.ac -fi ac -o x_resp.mol2 -fo mol2 -c rc -cf x_resp2.ach
+  	antechamber -i x.ac -fi ac -o x_resp.ac -fo ac -c rc -cf x_resp2.ach
 
 Finally, we need to combine all the fragments, `charges, and atom types` to obtain the parameterized PEG2000-DMG molecule.
 
